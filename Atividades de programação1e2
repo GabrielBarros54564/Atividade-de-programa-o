@@ -1,3 +1,4 @@
+AV1
 1 questao:
 numero = int(input("digite um numero: "))
 if numero == 0:
@@ -72,4 +73,137 @@ classificacao = {
 contador = sum(input(pergunta)== 's' for pergunta in lista_perguntas)
 print(classificacao[contador])
 
+AV2:
+1 questao:
+contador = 0
+while contador <= 100:
+    print(contador)
+    contador += 1
 
+2 questao:
+n = int(input("Insira o limite (N): "))
+contador = 0
+
+while contador <= n:
+    print(contador)
+    contador += 1
+
+3 questao:
+while continuar.lower() == 's':
+    num1 = float(input("Digite o primeiro número para a adição: "))
+    num2 = float(input("Digite o segundo número para a adição: "))
+    
+    soma = num1 + num2
+    print(f"Resultado: {soma}")
+    
+    continuar = input("Deseja fazer outra conta de adição? (s/n): ")
+
+Desafios
+1 questao:
+a, b = 0, 1
+print(a)
+while True:
+    print(b)
+    if b > 500:
+        break
+    a, b = b, a + b
+
+2 questao:
+n = int(input("Quantos números deseja inserir? "))
+
+if n > 0:
+    soma = 0
+    primeiro_numb = float(input("Digite o 1º número: "))
+    maior = menor = soma = primeiro_numb
+    
+    for i in range(1, n):
+        num = float(input(f"Digite o {i+1}º número: "))
+        soma += num
+        if num > maior:
+            maior = num
+        if num < menor:
+            menor = num
+            
+    print(f"Menor valor: {menor}")
+    print(f"Maior valor: {maior}")
+    print(f"Soma dos valores: {soma}")
+else:
+    print("Quantidade inválida.")
+
+3 questao:
+n = int(input("Quantos números deseja inserir? "))
+
+if n > 0:
+    soma = 0
+    maior = float('-inf')
+    menor = float('inf')
+    
+    for i in range(n):
+        while True:
+            num = float(input(f"Digite o {i+1}º número (entre 0 e 1000): "))
+            if 0 <= num <= 1000:
+                break
+            print("Valor inválido. Digite apenas números entre 0 e 1000.")
+            
+        soma += num
+        if num > maior: maior = num
+        if num < menor: menor = num
+            
+    print(f"Menor valor: {menor}")
+    print(f"Maior valor: {maior}")
+    print(f"Soma dos valores: {soma}")
+
+4 questao:
+# Validação do Nome
+while True:
+    nome = input("Nome (maior que 3 caracteres): ")
+    if len(nome) > 3:
+        break
+    print("Erro: O nome deve ter mais que 3 caracteres.")
+
+# Validação da Idade
+while True:
+    idade = int(input("Idade (entre 0 e 150): "))
+    if 0 <= idade <= 150:
+        break
+    print("Erro: A idade deve estar entre 0 e 150.")
+
+# Validação do Salário
+while True:
+    salario = float(input("Salário (maior que zero): "))
+    if salario > 0:
+        break
+    print("Erro: O salário deve ser maior que zero.")
+
+# Validação do Sexo
+while True:
+    sexo = input("Sexo ('f' para feminino ou 'm' para masculino): ").lower()
+    if sexo == 'f' or sexo == 'm':
+        break
+    print("Erro: Digite 'f' ou 'm'.")
+
+# Validação do Estado Civil
+while True:
+    estado_civil = input("Estado Civil ('s', 'c', 'v', 'd'): ").lower()
+    if estado_civil in ['s', 'c', 'v', 'd']:
+        break
+    print("Erro: Digite 's', 'c', 'v' ou 'd'.")
+
+print("\nTodas as informações foram validadas com sucesso!")
+
+5 questao:
+numero = int(input("Digite um número inteiro: "))
+eh_primo = True
+
+if numero <= 1:
+    eh_primo = False
+else:
+    for i in range(2, numero):
+        if numero % i == 0:
+            eh_primo = False
+            break
+
+if eh_primo:
+    print(f"{numero} é um número primo.")
+else:
+    print(f"{numero} não é um número primo.")
