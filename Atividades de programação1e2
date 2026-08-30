@@ -1,1 +1,75 @@
+1 questao:
+numero = int(input("digite um numero: "))
+if numero == 0:
+    print("numero invalido")
+elif numero%2 == 0:
+    print("É par")
+else:
+    print("É impar")
+
+
+2 questao:
+numb1= int(input("Primeiro numero: "))
+numb2= int(input("Segundo numero: "))
+
+if numb1 > numb2:
+    print(numb1)
+else:
+    print(numb2)
+
+
+3 questao:
+Let = input ("Digite uma letra: ")[0]
+
+if not Let.isalpha():
+    print("Não é letra")
+elif Let.lower() in 'aeiou':
+    print("É vogal")
+else:
+    print("É consoante")
+
+
+4 questao:
+numb1= int(input("primeiro numero: "))
+numb2= int(input("segundo numero: "))
+numb3= int(input("terceiro numero: "))
+
+max_numb= max (numb1, numb2, numb3)
+
+print(max_numb)
+
+
+5 questao:
+turnos= {
+    "m": "bom dia",
+    "v": "boa tarde",
+    "n": "boa noite",
+}
+
+turno = input("Digite o turno: ").lower()
+
+mensagem = turnos.get(turno, 'Valor INvalido.')
+
+print(mensagem)
+
+
+6 e 7 questao:
+lista_perguntas = ["telefonou para vitima?",
+                    "Esteve no local do crime?",
+                    "Mora perto da vitima?",
+                    "Devia a vitima?",
+                    "já trabalho para vitima?"]
+
+classificacao = {
+    0: "inocente",
+    1: "inocente",
+    2: "suspeito",
+    3: "Cúmplice",
+    4: "Cúmplice",
+    5: "Assassino",
+}
+
+contador = sum(input(pergunta)== 's' for pergunta in lista_perguntas)
+print(classificacao[contador])
+
 
